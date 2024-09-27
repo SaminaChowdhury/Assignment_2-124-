@@ -31,7 +31,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        // Initialize views
+        
         checkboxTerms = findViewById(R.id.checkbox_terms);
         radioGroupGender = findViewById(R.id.radioGroup_gender);
         ratingBar = findViewById(R.id.ratingBar);
@@ -39,7 +39,7 @@ public class SecondActivity extends AppCompatActivity {
         switchNotifications = findViewById(R.id.switch_notifications);
         btnBack = findViewById(R.id.btn_back);
 
-        // Listener for the checkbox
+        
         checkboxTerms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +51,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        // Listener for RadioGroup selection
+        
         radioGroupGender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -63,7 +63,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        // Listener for RatingBar changes
+       
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
@@ -71,7 +71,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        // Listener for SeekBar changes
+        
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -80,16 +80,16 @@ public class SecondActivity extends AppCompatActivity {
 
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-                // Do something when the user starts touching the SeekBar
+                
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                // Do something when the user stops touching the SeekBar
+               
             }
         });
 
-        // Listener for the Switch
+       
         switchNotifications.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 Toast.makeText(SecondActivity.this, "Notifications Enabled", Toast.LENGTH_SHORT).show();
@@ -98,7 +98,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        // Go back to the first page
+       
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
